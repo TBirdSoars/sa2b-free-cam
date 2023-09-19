@@ -18,7 +18,8 @@
       <Property name="AnalogMaxSpeed" type="int" defaultvalue="256" minvalue="0" maxvalue="2000" display="Right-analog maximum speed">
         <HelpText>The maximum speed at which the camera can rotate when using the right analog or LR triggers.</HelpText>
       </Property>
-      <Property name="InvertAxes" type="bool" defaultvalue="False" display="Invert right-analog axes" />
+      <Property name="InvertAxisX" type="bool" defaultvalue="False" display="Invert right-analog X axis" />
+      <Property name="InvertAxisY" type="bool" defaultvalue="False" display="Invert right-analog Y axis" />
     </Group>
   </Groups>
 </ConfigSchema>

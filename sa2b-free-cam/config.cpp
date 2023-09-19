@@ -10,7 +10,8 @@ namespace config
 	float height      = 10.5f;
 	int analog_spd    = 0x40;
 	int analog_max    = 0x100;
-	bool invert_axes  = false;
+	bool invert_axis_x = false;
+	bool invert_axis_y = false;
 
 	void read(const char* path)
 	{
@@ -25,7 +26,8 @@ namespace config
 			height       = general->getFloat("Height", height);
 			analog_spd   = max(0, min(2000, general->getInt("AnalogThreshold", analog_spd)));
 			analog_max   = max(analog_spd, min(2000, general->getInt("AnalogMaxSpeed", analog_max)));
-			invert_axes  = general->getBool("InvertAxes", invert_axes);
+			invert_axis_x = general->getBool("InvertAxisX", invert_axis_x);
+			invert_axis_y = general->getBool("InvertAxisY", invert_axis_y);
 		}
 
 		delete config;
